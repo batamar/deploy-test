@@ -1,0 +1,68 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.tags = exports.jobFields = exports.clientFields = exports.candidateFields = void 0;
+exports.candidateFields = [
+    { value: '_id', text: 'Candidate ID' },
+    { value: 'avatarUrl', text: 'Avatar URL' },
+    { value: 'firstName', text: 'First Name' },
+    { value: 'lastName', text: 'Last Name' },
+    { value: 'emails', text: 'Emails' },
+    { value: 'phones', text: 'Phones' },
+    { value: 'currentLocation', text: 'Current Location' },
+    { value: 'currentCompany', text: 'Current Company' },
+    { value: 'linkedinUrl', text: 'LinkedIn URL' },
+    { value: 'githubUrl', text: 'GitHub URL' },
+    { value: 'googleScholarUrl', text: 'Google Scholar URL' },
+    { value: 'websiteUrl', text: 'Website URL' },
+    { value: 'address', text: 'Address' },
+    { value: 'city', text: 'City' },
+    { value: 'state', text: 'State' },
+    { value: 'zip', text: 'Zip' },
+    { value: 'notes', text: 'Notes' },
+    { value: 'source', text: 'Source' },
+    { value: 'createdAt', text: 'Created At' },
+    { value: 'updatedAt', text: 'Updated At' },
+];
+exports.clientFields = [
+    { value: '_id', text: 'Client ID' },
+    { value: 'name', text: 'Name' },
+    { value: 'logo', text: 'Logo' },
+    { value: 'description', text: 'Description' },
+    { value: 'websiteUrl', text: 'Website URL' },
+    { value: 'address', text: 'Address' },
+    { value: 'notes', text: 'Notes' },
+    { value: 'createdAt', text: 'Created At' },
+    { value: 'updatedAt', text: 'Updated At' },
+    { value: 'fundingRange', text: 'Funding Range' },
+    { value: 'location', text: 'Location' },
+    { value: 'foundationYear', text: 'Foundation Year' },
+    { value: 'companyEmailAddress', text: 'Company Email Address' },
+    { value: 'jobBoardUrl', text: 'Job Board URL' },
+    { value: 'linkedinUrl', text: 'LinkedIn URL' },
+    { value: 'city', text: 'City' },
+    { value: 'state', text: 'State' },
+    { value: 'country', text: 'Country' },
+    { value: 'region', text: 'Region' },
+    { value: 'business', text: 'Business' },
+    { value: 'notes', text: 'Notes' },
+];
+exports.jobFields = [
+    { value: 'id', text: 'Job ID' },
+    { value: 'title', text: 'Title' },
+    { value: 'description', text: 'Description' },
+    { value: 'createdAt', text: 'Created At' },
+    { value: 'updatedAt', text: 'Updated At' },
+    { value: 'notes', text: 'Notes' },
+    { value: 'jobUrl', text: 'Job URL' },
+    { value: 'location', text: 'Location' },
+    { value: 'state', text: 'State' },
+    { value: 'status', text: 'Status' },
+    { value: 'datePosted', text: 'Date Posted' },
+    { value: 'companySize', text: 'Company Size' },
+    { value: 'employmentType', text: 'Employment Type' },
+];
+exports.tags = [
+    ...(exports.candidateFields.map((field) => ({ value: `%CANDIDATE_${field.value.toUpperCase()}%`, text: `Candidate - ${field.text}` }))),
+    ...(exports.clientFields.map((field) => ({ value: `%CLIENT_${field.value.toUpperCase()}%`, text: `Client - ${field.text}` }))),
+    ...(exports.jobFields.map((field) => ({ value: `%JOB_${field.value.toUpperCase()}%`, text: `Job - ${field.text}` })))
+];
